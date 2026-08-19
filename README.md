@@ -1,4 +1,3 @@
-// README.md
 # Explorer on Android - Windows 10 Style Launcher with Plugin Architecture
 
 > A modern Android launcher inspired by Windows 10 Explorer, featuring a powerful plugin system for extensibility.
