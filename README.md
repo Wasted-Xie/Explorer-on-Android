@@ -1,5 +1,5 @@
 # Explorer on Android - Windows 10 Style Launcher with Plugin Architecture
-# 适用于Android设备的探索者应用——采用Windows 10风格的主界面设计，并具备插件架构
+# 适用于Android设备的桌面应用——采用Windows 10风格的主界面设计，并具备插件架构
 
 > A modern Android launcher inspired by Windows 10 Explorer, featuring a powerful plugin system for extensibility.
 >一款现代风格的安卓启动器，其设计灵感来源于Windows 10的资源管理器界面。该启动器拥有强大的插件系统，可方便用户进行扩展。
