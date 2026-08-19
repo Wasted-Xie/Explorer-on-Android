@@ -9,6 +9,7 @@
 [![Hilt](https://img.shields.io/badge/Hilt-2.48-red.svg)](https://dagger.dev/hilt)
 [![Gradle](https://img.shields.io/badge/Gradle-8.13-yellow.svg)](https://gradle.org)
 
+-项目由于开发环境暂时搁置
 ---
 
 ## 目录
