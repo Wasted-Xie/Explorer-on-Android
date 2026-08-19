@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.explorer.plugin.filemanager">
+
+    <!-- Permissions needed for file manager functionality -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> <!-- For Android 13+ -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/> <!-- For photos/videos location -->
+    
+    <!-- For accessing media files -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+    <application
+        android:name=".FileManagerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FileManager"
+        android:extractNativeLibs="true">
+
+        <!-- Plugin Service -->
+        <service
+            android:name=".FileManagerPluginService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.explorercore.plugin.BIND_PLUGIN_SERVICE"/>
+            </intent-filter>
+            
+            <!-- Plugin metadata -->
+            <meta-data
+                android:name="com.explorercore.plugin"
+                android:resource="@xml/plugin_descriptor"/>
+        </service>
+
+        <!-- Optional: Activity for when plugin is launched directly (e.g., from launcher icon) -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
